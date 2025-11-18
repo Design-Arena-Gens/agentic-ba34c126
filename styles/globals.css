@@ -1,0 +1,18 @@
+:root { --bg: #0a0a0a; --fg: #eaeaea; --muted: #9aa0a6; --accent: #a3e635; }
+html, body, #__next { height: 100%; }
+html, body { padding: 0; margin: 0; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Droid Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+* { box-sizing: border-box; }
+
+.container { display: grid; grid-template-rows: 1fr auto; height: 100%; }
+.stage { position: relative; display: grid; place-items: center; overflow: hidden; }
+.canvasWrap { position: relative; width: min(92vw, 1280px); aspect-ratio: 16 / 9; border: 1px solid #1f2937; background: radial-gradient(1200px 1200px at 50% 50%, #161616, #0b0b0b 60%); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.4) inset, 0 20px 60px rgba(0,0,0,0.35); }
+.brand { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.brand h1 { margin: 0; letter-spacing: 0.24rem; font-family: Orbitron, Inter, sans-serif; font-weight: 600; font-size: clamp(24px, 5vw, 56px); text-transform: uppercase; color: var(--fg); text-shadow: 0 0 20px rgba(163,230,53,0.08); }
+.brand .sub { margin-top: 8px; letter-spacing: 0.32rem; font-weight: 400; font-size: clamp(10px, 1.6vw, 14px); color: var(--muted); }
+.controls { display: flex; gap: 12px; padding: 18px 20px; justify-content: center; border-top: 1px solid #1f2937; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1)); }
+button { background: #101826; color: var(--fg); border: 1px solid #243041; border-radius: 10px; padding: 10px 14px; cursor: pointer; font-weight: 600; letter-spacing: 0.02em; }
+button:hover { border-color: #3a4a63; }
+button.primary { background: #0f172a; border-color: #334155; }
+.badge { padding: 8px 10px; border: 1px solid #243041; border-radius: 10px; color: var(--muted); }
+.link { color: var(--accent); text-decoration: none; }
+status { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
